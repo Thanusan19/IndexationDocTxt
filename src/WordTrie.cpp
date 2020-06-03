@@ -69,3 +69,32 @@ bool WordTrie::search(std::string word)
     //if it's a stored Word or Not
     return current->getIsWord();
 }
+
+
+/* Function : initTree
+*
+*  Description : Init the tree by extracting and storing all words from
+*               the given file into the tree
+*  INPUT : -fileName -> the txt file name
+*          -directoryPath -> the directory path to the file
+*/
+void WordTrie::initTree(std::string fileName,std::string directoryPath)
+{
+    string filePath = directoryPath+"/"+fileName;
+    cout<<"File path : "<<filePath<<endl;
+    ifstream myFlux(filePath);
+    if(!myFlux){
+        cerr<<"ERROR: txt file not open correctly into initTree!"<<endl;
+        cerr<<"File path error : "<<filePath<<endl;
+    }else{
+        string word;
+        //while it's not the end of the file
+        //Read and Store Words into the tree
+        while (!myFlux.eof())
+        {
+            myFlux>>word;
+            this->insert(word);
+        }
+    }
+    myFlux.close();
+}

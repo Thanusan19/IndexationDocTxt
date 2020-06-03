@@ -9,7 +9,11 @@
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Main.cpp
 iostream
 -
+fstream
+-
 string
+-
+dirent.h
 -
 Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
@@ -33,4 +37,6 @@ WordTrie.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
 Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+fstream
+-
 
