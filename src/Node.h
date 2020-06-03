@@ -4,6 +4,8 @@
 #include <iostream>
 #include <string>
 
+#include "TxtFile.h"
+
 //Global Variable
 int const alphabetSize =26;
  
@@ -16,12 +18,24 @@ class Node
         bool isThere(int const letter) const;
         void addNode(int const letter, Node *newNode);
         Node* getNode(int const letter) const;
+
+        void addTxtFile(std::string fileName);
+
+        //Accessors
         void setIsWord(bool isWord);
+        void setFilesListHead(TxtFile* ptrHead);
+
         bool getIsWord() const;
+        TxtFile* getFilesListHead() const;
+
 
     private:
         bool m_isWord;
         Node* childNodes[alphabetSize];
+        //If this node is the last node of a "word"
+        //"m_filesListHead" is the Head ptr of a list
+        //This is a file Names list which contain this word
+        TxtFile *m_filesListHead;
 
 };
  

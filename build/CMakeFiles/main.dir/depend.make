@@ -3,12 +3,18 @@
 
 CMakeFiles/main.dir/src/Main.cpp.o: ../src/Main.cpp
 CMakeFiles/main.dir/src/Main.cpp.o: ../src/Node.h
+CMakeFiles/main.dir/src/Main.cpp.o: ../src/TxtFile.h
 CMakeFiles/main.dir/src/Main.cpp.o: ../src/WordTrie.h
 
 CMakeFiles/main.dir/src/Node.cpp.o: ../src/Node.cpp
 CMakeFiles/main.dir/src/Node.cpp.o: ../src/Node.h
+CMakeFiles/main.dir/src/Node.cpp.o: ../src/TxtFile.h
+
+CMakeFiles/main.dir/src/TxtFile.cpp.o: ../src/TxtFile.cpp
+CMakeFiles/main.dir/src/TxtFile.cpp.o: ../src/TxtFile.h
 
 CMakeFiles/main.dir/src/WordTrie.cpp.o: ../src/Node.h
+CMakeFiles/main.dir/src/WordTrie.cpp.o: ../src/TxtFile.h
 CMakeFiles/main.dir/src/WordTrie.cpp.o: ../src/WordTrie.cpp
 CMakeFiles/main.dir/src/WordTrie.cpp.o: ../src/WordTrie.h
 

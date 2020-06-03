@@ -27,7 +27,7 @@ WordTrie::~WordTrie()
 *               Trie algorithm. Complexity= O(length(wordToInsert))
 *  INPUT : -word -> the word to insert into the tree
 */
-void WordTrie::insert(std::string word)
+void WordTrie::insert(std::string word, std::string fileName)
 {
     Node *current = head;
     //Add a Node for each character of the "Word"
@@ -42,6 +42,9 @@ void WordTrie::insert(std::string word)
     }
     //set the last Node as being a "Word"
     current->setIsWord(true);
+    //Add the fileName to the last Node into txtFilesList
+    cout<<"Word to insert : "<<word<<endl;
+    current->addTxtFile(fileName);
 }
 
 
@@ -51,7 +54,7 @@ void WordTrie::insert(std::string word)
 *                Complexity = O( length(word to search ))
 *  INPUT : -word -> the word to insert into the tree
 */
-bool WordTrie::search(std::string word)
+TxtFile* WordTrie::search(std::string word)
 {
     Node *current=head;
     //Search for each character of the seek word 
@@ -61,13 +64,19 @@ bool WordTrie::search(std::string word)
         int letter = (int)word[i] - (int)'a';
         if(!current->isThere(letter)){
             //word is not into the tree
-            return false;
+            return 0;
         }
         current=current->getNode(letter);
     }
     //word exist into the tree. Need to check 
     //if it's a stored Word or Not
-    return current->getIsWord();
+    //if it's true we return All file Names 
+    //which contain the "word"
+    if(current->getIsWord()){
+        return current->getFilesListHead();
+    }else{
+        return 0;
+    }
 }
 
 
@@ -88,12 +97,13 @@ void WordTrie::initTree(std::string fileName,std::string directoryPath)
         cerr<<"File path error : "<<filePath<<endl;
     }else{
         string word;
+        myFlux>>word;
         //while it's not the end of the file
         //Read and Store Words into the tree
         while (!myFlux.eof())
         {
+            this->insert(word,fileName);
             myFlux>>word;
-            this->insert(word);
         }
     }
     myFlux.close();

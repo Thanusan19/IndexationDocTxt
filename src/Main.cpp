@@ -5,6 +5,7 @@
 
 #include "Node.h"
 #include "WordTrie.h"
+#include "TxtFile.h"
 
 
 using namespace std;
@@ -36,7 +37,6 @@ int main(int argc, char const *argv[])
 		return 0;
 	}
 	string directoryPathString=argv[1];
-
 	cout<<"Given Directory Path : "<<directoryPathString<<endl;
 
 
@@ -75,7 +75,6 @@ int main(int argc, char const *argv[])
 
 
 
-
 	//Ask for "Word" to Search
 	cout<<endl;
 	cout<<"Give the Word to Search : ";
@@ -83,11 +82,13 @@ int main(int argc, char const *argv[])
 	cin>>wordToSearch;
 
 	//Search Files containing the given Word
-
-	bool state = wordTrie.search(wordToSearch);
-	cout<<state<<endl;
-
-
+	TxtFile *filesListPtr= wordTrie.search(wordToSearch);
+	if(!(filesListPtr==0)){
+		cout<<"Word is the following files : "<<endl;
+		filesListPtr->DisplayTxtFilesList(filesListPtr);
+	}else{
+		cout<<"The asked word is not into this directory's or sub-Distrectory's '.txt' files."<<endl;
+	}
 
 	return 0;
 }

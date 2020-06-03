@@ -4,11 +4,17 @@
 CMakeFiles/main.dir/src/Main.cpp.o
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Main.cpp
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+ /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
 CMakeFiles/main.dir/src/Node.cpp.o
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.cpp
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+ /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
+CMakeFiles/main.dir/src/TxtFile.cpp.o
+ /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.cpp
+ /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
 CMakeFiles/main.dir/src/WordTrie.cpp.o
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+ /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.cpp
  /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h

@@ -1,1 +1,1 @@
-/usr/bin/c++   -Wall -Werror -g -std=c++14   CMakeFiles/main.dir/src/Main.cpp.o CMakeFiles/main.dir/src/Node.cpp.o CMakeFiles/main.dir/src/WordTrie.cpp.o  -o main 
+/usr/bin/c++   -Wall -Werror -g -std=c++14   CMakeFiles/main.dir/src/Main.cpp.o CMakeFiles/main.dir/src/Node.cpp.o CMakeFiles/main.dir/src/TxtFile.cpp.o CMakeFiles/main.dir/src/WordTrie.cpp.o  -o main 

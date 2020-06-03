@@ -1,10 +1,11 @@
 #include "Node.h"
 
+using namespace std;
 /**************************/
 /*Constructor - Destructor*/
 /**************************/
 
-Node::Node():m_isWord(false)
+Node::Node():m_isWord(false),m_filesListHead(0)
 {
     for (int i = 0; i < alphabetSize; i++)
     {
@@ -65,25 +66,41 @@ Node* Node::getNode(int const letter) const
 }
 
 
-
-/* Function : setIsWord
+/* Function : addTxtFile
 *
-*  Description : set the status as isWord if this Node is the end of one 
-*               of the stored Word
-*  INPUT : -isWord -> bool to state the Node as a Word End or Not
+*  Description : Crete a TxtFile object, affect the fileName 
+*                and link it at the last of the txtFiles List
+*  INPUT : -fileName --> the fileName to affect
 */
-void Node::setIsWord(bool isWord)
+void Node::addTxtFile(std::string fileName)
 {
-    m_isWord=isWord;
+    if(m_filesListHead==0){
+        m_filesListHead = new TxtFile(fileName);
+    }else{
+        //previous contain the TxtFile object addr 
+        //which is before the current one
+        //previous ptr is need in order to set ptrNext
+        TxtFile *previous = m_filesListHead;
+        TxtFile *current = m_filesListHead->getPtrNext();
+        while(current!=NULL){
+            previous = current;
+            current=current->getPtrNext();
+        }
+        cout<<"File Names : "<<fileName<<endl;
+        cout<<"Pointed addr : "<<m_filesListHead<<endl; 
+        previous->setPtrNext(new TxtFile(fileName));
+    }
 }
 
 
-/* Function : getIsWord
-*
-*  Description : Get the state of the Node as a Word or Not
-*  OUTPUT : return the bool value of "m_isWord"
-*/
-bool Node::getIsWord() const
-{
-    return m_isWord;
-}
+
+/***********/
+/*ACCESSORS*/
+/***********/
+
+void Node::setIsWord(bool isWord) { m_isWord=isWord; }
+void Node::setFilesListHead(TxtFile* ptrHead) { m_filesListHead=ptrHead; }
+
+
+bool Node::getIsWord() const { return m_isWord; }
+TxtFile* Node::getFilesListHead() const { return m_filesListHead; }

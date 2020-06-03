@@ -177,6 +177,33 @@ src/Node.cpp.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Node.cpp.s
 .PHONY : src/Node.cpp.s
 
+src/TxtFile.o: src/TxtFile.cpp.o
+
+.PHONY : src/TxtFile.o
+
+# target to build an object file
+src/TxtFile.cpp.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TxtFile.cpp.o
+.PHONY : src/TxtFile.cpp.o
+
+src/TxtFile.i: src/TxtFile.cpp.i
+
+.PHONY : src/TxtFile.i
+
+# target to preprocess a source file
+src/TxtFile.cpp.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TxtFile.cpp.i
+.PHONY : src/TxtFile.cpp.i
+
+src/TxtFile.s: src/TxtFile.cpp.s
+
+.PHONY : src/TxtFile.s
+
+# target to generate assembly for a file
+src/TxtFile.cpp.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/TxtFile.cpp.s
+.PHONY : src/TxtFile.cpp.s
+
 src/WordTrie.o: src/WordTrie.cpp.o
 
 .PHONY : src/WordTrie.o
@@ -219,6 +246,9 @@ help:
 	@echo "... src/Node.o"
 	@echo "... src/Node.i"
 	@echo "... src/Node.s"
+	@echo "... src/TxtFile.o"
+	@echo "... src/TxtFile.i"
+	@echo "... src/TxtFile.s"
 	@echo "... src/WordTrie.o"
 	@echo "... src/WordTrie.i"
 	@echo "... src/WordTrie.s"

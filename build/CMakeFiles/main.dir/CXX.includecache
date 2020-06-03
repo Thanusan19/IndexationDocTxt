@@ -19,12 +19,26 @@ Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
 WordTrie.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
+TxtFile.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
 
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.cpp
 Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
 
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+iostream
+-
+string
+-
+TxtFile.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.cpp
+TxtFile.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
 iostream
 -
 string

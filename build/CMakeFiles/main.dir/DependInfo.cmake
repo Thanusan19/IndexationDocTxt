@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Main.cpp" "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/main.dir/src/Main.cpp.o"
   "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.cpp" "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/main.dir/src/Node.cpp.o"
+  "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.cpp" "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/main.dir/src/TxtFile.cpp.o"
   "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.cpp" "/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/main.dir/src/WordTrie.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
