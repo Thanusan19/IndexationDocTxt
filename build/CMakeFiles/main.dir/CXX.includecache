@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Main.cpp
+iostream
+-
+string
+-
+Node.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+WordTrie.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.cpp
+Node.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+iostream
+-
+string
+-
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.cpp
+WordTrie.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
+
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/WordTrie.h
+Node.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
+

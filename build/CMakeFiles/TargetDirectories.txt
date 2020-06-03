@@ -1,0 +1,3 @@
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/rebuild_cache.dir
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/main.dir
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/build/CMakeFiles/edit_cache.dir
