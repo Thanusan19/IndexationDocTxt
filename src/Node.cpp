@@ -86,8 +86,9 @@ void Node::addTxtFile(std::string fileName)
             previous = current;
             current=current->getPtrNext();
         }
-        cout<<"File Names : "<<fileName<<endl;
-        cout<<"Pointed addr : "<<m_filesListHead<<endl; 
+        //DEBUG CODE
+        //cout<<"File Names : "<<fileName<<endl;
+        //cout<<"Pointed addr : "<<m_filesListHead<<endl; 
         previous->setPtrNext(new TxtFile(fileName));
     }
 }

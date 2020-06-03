@@ -28,23 +28,11 @@ std::string getExtension(std::string const& fileName)
 	
 }
 
-int main(int argc, char const *argv[])
+
+
+
+int memoryIndexing(WordTrie& wordTrie, std::string const& directoryPathString)
 {
-	//Get the Directory path
-	if(argv[1]==NULL){
-		cout<<"ERROR : Directory path is empty!"<<endl;
-		cout<<"Give a Directory path as a command argument"<<endl;
-		return 0;
-	}
-	string directoryPathString=argv[1];
-	cout<<"Given Directory Path : "<<directoryPathString<<endl;
-
-
-
-
-	cout<<endl;
-	cout<<"Memory Indexation Start."<<endl;
-
 	//Open the Directory
 	DIR *directoryPath=opendir(directoryPathString.c_str());
 	if(directoryPath==NULL) 
@@ -56,22 +44,49 @@ int main(int argc, char const *argv[])
 	
 	struct dirent *entry;
 	string fileName="";
+	int fileType=0;
 	string extension="";
-	WordTrie wordTrie;
 
 	//Get all file with extension ".txt"
  	while ((entry = readdir(directoryPath)) != NULL) {
 		fileName = entry->d_name;
+		fileType=entry->d_type;
+		//cout<<"File type into the Directory : "<<fileType<<endl; //DEBUG CODE
+
 		extension = getExtension(fileName);
 		if(extension=="txt"){
 			cout<<"File extension : "<<extension<<endl;
 			//Init the data Structure
 			wordTrie.initTree(fileName,directoryPathString);
+		}else if((fileType==4) && (fileName!=".") && (fileName!="..")){ 
+			//Linux System : 4 --> directory
+			cout<<"This is a Sub directory"<<endl;
+			memoryIndexing(wordTrie,directoryPathString+"/"+fileName);
 		}
+		
 	}
 
 	closedir (directoryPath);
-	cout<<"Memory Indexation END."<<endl;
+	return 0;
+}
+
+int main(int argc, char const *argv[])
+{
+	//Get the Directory path
+	if(argv[1]==NULL){
+		cout<<"ERROR : Directory path is empty!"<<endl;
+		cout<<"Give a Directory path as a command argument"<<endl;
+		return 0;
+	}
+	string directoryPathString=argv[1];
+	cout<<"Given Directory Path : "<<directoryPathString<<endl;
+
+	//Memory Indexing
+	cout<<endl;
+	cout<<"Memory Indexing Start."<<endl;
+	WordTrie wordTrie;
+	memoryIndexing(wordTrie,directoryPathString);
+	cout<<"Memory Indexing END."<<endl;
 
 
 

@@ -43,7 +43,7 @@ void WordTrie::insert(std::string word, std::string fileName)
     //set the last Node as being a "Word"
     current->setIsWord(true);
     //Add the fileName to the last Node into txtFilesList
-    cout<<"Word to insert : "<<word<<endl;
+    //cout<<"Word to insert : "<<word<<endl; //DEBUG CODE
     current->addTxtFile(fileName);
 }
 
