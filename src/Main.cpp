@@ -88,22 +88,29 @@ int main(int argc, char const *argv[])
 	memoryIndexing(wordTrie,directoryPathString);
 	cout<<"Memory Indexing END."<<endl;
 
+	//Loop the Search Process
+	while (1){
+		//Ask for "Word" to Search 
+		cout<<endl;
+		cout<<"Write 'exit()' to quit the search process"<<endl;
+		cout<<"Give the Word to Search : ";
+		string wordToSearch;
+		cin>>wordToSearch;
 
-
-	//Ask for "Word" to Search
-	cout<<endl;
-	cout<<"Give the Word to Search : ";
-	string wordToSearch;
-	cin>>wordToSearch;
-
-	//Search Files containing the given Word
-	TxtFile *filesListPtr= wordTrie.search(wordToSearch);
-	if(!(filesListPtr==0)){
-		cout<<"Word is the following files : "<<endl;
-		filesListPtr->DisplayTxtFilesList(filesListPtr);
-	}else{
-		cout<<"The asked word is not into this directory's or sub-Distrectory's '.txt' files."<<endl;
+		if(wordToSearch=="exit()"){
+			break;
+		}
+		
+		TxtFile *filesListPtr= wordTrie.search(wordToSearch);
+		if(!(filesListPtr==0)){
+			cout<<"Searched Word is in following files : "<<endl;
+			filesListPtr->DisplayTxtFilesList(filesListPtr);
+		}else{
+			cout<<"The asked word is not into this directory's or sub-Distrectory's '.txt' files."<<endl;
+		}
+		
 	}
+	
 
 	return 0;
 }
