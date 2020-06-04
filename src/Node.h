@@ -5,9 +5,9 @@
 #include <string>
 
 #include "TxtFile.h"
+#include "GLOBAL_VARIABLE.h"
 
-//Global Variable
-int const alphabetSize =26;
+
  
 class Node
 {
@@ -15,14 +15,14 @@ class Node
         Node();
 		~Node();
 
-        bool isThere(int const letter) const;
-        void addNode(int const letter, Node *newNode);
-        Node* getNode(int const letter) const;
+        bool isThere(int const& letter) const;
+        void addNode(int const& letter, Node *newNode);
+        Node* getNode(int const& letter) const;
 
-        void addTxtFile(std::string fileName);
+        void addTxtFile(std::string const& fileName);
 
         //Accessors
-        void setIsWord(bool isWord);
+        void setIsWord(bool const& isWord);
         void setFilesListHead(TxtFile* ptrHead);
 
         bool getIsWord() const;

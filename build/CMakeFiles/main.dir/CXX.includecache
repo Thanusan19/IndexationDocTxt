@@ -6,15 +6,9 @@
 
 #IncludeRegexTransform: 
 
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/GLOBAL_VARIABLE.h
+
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Main.cpp
-iostream
--
-fstream
--
-string
--
-dirent.h
--
 Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
 WordTrie.h
@@ -33,6 +27,8 @@ string
 -
 TxtFile.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.h
+GLOBAL_VARIABLE.h
+/home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/GLOBAL_VARIABLE.h
 
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/TxtFile.cpp
 TxtFile.h
@@ -52,5 +48,7 @@ WordTrie.h
 Node.h
 /home/thane/Cpp/Dev/interviewProjects/IndexationDocTxt/src/Node.h
 fstream
+-
+dirent.h
 -
 

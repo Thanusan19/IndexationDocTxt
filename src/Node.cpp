@@ -31,7 +31,7 @@ Node::~Node()
 *  INPUT : -letter -> ASCII table associate number for a "char"
 *  OUTPUT : true if the character key already exist into the tree
 */
-bool Node::isThere(int const letter) const
+bool Node::isThere(int const& letter) const
 {
     if(childNodes[letter]==NULL){
         return false;
@@ -47,7 +47,7 @@ bool Node::isThere(int const letter) const
 *                   associate to the Node
 *          -newNode -> ptr of the node to insert
 */
-void Node::addNode(int const letter, Node *newNode)
+void Node::addNode(int const& letter, Node *newNode)
 {
     childNodes[letter]=newNode;
 }
@@ -60,7 +60,7 @@ void Node::addNode(int const letter, Node *newNode)
 *                   of a Node
 *  OUTPUT : the Node ptr of the associated Key "letter"
 */
-Node* Node::getNode(int const letter) const
+Node* Node::getNode(int const& letter) const
 {
     return childNodes[letter];
 }
@@ -72,7 +72,7 @@ Node* Node::getNode(int const letter) const
 *                and link it at the last of the txtFiles List
 *  INPUT : -fileName --> the fileName to affect
 */
-void Node::addTxtFile(std::string fileName)
+void Node::addTxtFile(std::string const& fileName)
 {
     if(m_filesListHead==0){
         m_filesListHead = new TxtFile(fileName);
@@ -99,7 +99,7 @@ void Node::addTxtFile(std::string fileName)
 /*ACCESSORS*/
 /***********/
 
-void Node::setIsWord(bool isWord) { m_isWord=isWord; }
+void Node::setIsWord(bool const& isWord) { m_isWord=isWord; }
 void Node::setFilesListHead(TxtFile* ptrHead) { m_filesListHead=ptrHead; }
 
 

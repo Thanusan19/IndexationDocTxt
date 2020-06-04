@@ -14,13 +14,17 @@ class TxtFile
 
         void DisplayTxtFilesList(TxtFile *ptrTxtFilesList) const;
 
+        //Accessors
         std::string getTxtFileName() const;
         std::string getTxtFolderPath() const;
         TxtFile* getPtrNext() const;
 
-        void setTxtFileName(std::string fileName);
-        void setTxtFolderPath(std::string folderPath);
-        void setPtrNext(TxtFile *ptrNext);         
+        void setTxtFileName(std::string const& fileName);
+        void setTxtFolderPath(std::string const& folderPath);
+        void setPtrNext(TxtFile *ptrNext);
+
+        //Static methods
+        static std::string getExtension(std::string const& fileName);
 
     private:
         std::string m_txtFileName;

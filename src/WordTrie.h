@@ -3,6 +3,8 @@
 
 #include "Node.h"
 #include <fstream>
+#include <dirent.h>
+
 
 using namespace std;
 
@@ -11,10 +13,14 @@ class WordTrie
     public:
         WordTrie();
 		~WordTrie();
-        void insert(std::string word , std::string fileName); 
-        TxtFile* search(std::string word); 
 
-        void initTree(std::string fileName,std::string directoryPath);
+        //Tree methods
+        void insert(std::string const& word , std::string const& fileName); 
+        TxtFile* search(std::string const& word); 
+        void initTree(std::string const& fileName,std::string const& directoryPath);
+
+        //Static methods
+        static int memoryIndexing(WordTrie& wordTrie, std::string const& directoryPathString);
 
     private:
         Node *head;
